@@ -1,0 +1,46 @@
+<p>
+  addmovie works!
+</p>
+<div >
+  <div >movie Entry Form : </div>
+  <div >
+  <form  (submit)="adding()">
+  <div class="form-group">
+    <label>movieid: </label>
+    <div >
+      <input type="text"  [(ngModel)]="modelschema.movieid" name="movieid" >
+    </div>
+  </div>
+ 
+  <div >
+    <label>movie Name : </label>
+    <div>
+      <input type="text"  [(ngModel)]="modelschema.moviename" name="moviename">
+    </div>
+  </div>
+  <div >
+    <label>Rating : </label>
+    <div >
+      <input type="text" [(ngModel)]="modelschema.rating" name="rating">
+    </div>
+  </div>
+  <div >
+    <label >releasedate : </label>
+    <div >
+      <input type="text"  [(ngModel)]="modelschema.release_date" name="release_date">
+    </div>
+  </div>
+  
+  
+
+  <div>
+    <div >
+      <button type="submit" class="btn btn-success">Save</button>
+      
+    </div>
+   
+  </div>
+</form>
+
+  </div>
+</div>

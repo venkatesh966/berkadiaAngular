@@ -1,0 +1,29 @@
+<p>
+  get works!
+</p>
+<form id="filter">
+  <label>filtering data by id</label>
+  <input type="text" [(ngModel)]="term" name="term">
+</form>
+<table style="width:100%">
+  <tr>
+    <th>movieid</th>
+    <th>moviename</th> 
+    <th>rating</th>
+    <th>realease_date</th>
+    <th>language</th>
+  </tr>
+  <tr *ngFor='let movie of movie | filter:term'>
+    <td><a [routerLink]="['/details',movie.movieid]">{{movie.movieid}}</a></td>
+    <td>{{movie.moviename}}</td> 
+    <td>{{movie.rating}}</td>
+    <td>{{movie.release_date}}</td>
+    <td>{{movie.language}}</td>
+    <td width="275">
+      
+       <a class="btn btn-success"  routerLink="/update/{{movie._id}}">Update</a>
+      
+   </td>
+  </tr>
+ 
+</table>
